@@ -1,9 +1,15 @@
-<!-- TODO: adjust width -->
+<script>
+  import Toggle from './Toggle.svelte';
+</script>
 
-<header class="flex justify-end mx-auto px-4 py-8 w-full xl:w-[1120px] xl:px-0">
-  <nav class="flex flex-row gap-x-10 opacity-90">
+<!-- TODO: adjust width -->
+<header class="flex justify-end mx-auto px-4 py-8 w-full lg:w-[1024px] lg:px-0">
+  <!-- TODO: future feat -->
+  <!-- <nav class="flex flex-row gap-x-10 opacity-90 text-sm font-semibold">
     <a href="#">Articles</a>
     <a href="#">Media</a>
-    <a href="#">Youtube</a>
-  </nav>
+    <a href="#">YouTube</a>
+  </nav> -->
+
+  <Toggle />
 </header>

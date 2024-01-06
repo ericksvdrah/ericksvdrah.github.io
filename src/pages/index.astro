@@ -5,11 +5,15 @@ import Post from '../components/Post.svelte';
 import GitHub from '../components/icons/GitHub.svelte';
 import LinkedIn from '../components/icons/LinkedIn.svelte';
 import Mail from '../components/icons/Mail.svelte';
+import Work from '../components/Work.svelte';
+import X from '../components/icons/X.svelte';
+import DevTo from '../components/icons/DevTo.svelte';
+import { works } from '../components/store.js';
 ---
 
 <Layout title='Erick Saavedra' description='Website about Erick Saavedra'>
   <main class='px-4'>
-    <SectionContainer className='pt-44 pb-10 flex justify-between'>
+    <SectionContainer className='pt-32 flex justify-between'>
       <div>
         <h1 class='text-6xl font-black'>Hi, I'm Erick Saavedra!</h1>
 
@@ -19,38 +23,59 @@ import Mail from '../components/icons/Mail.svelte';
 
         <nav class='flex gap-x-4'>
           <GitHub className='size-6' />
+          <X className='size-6' />
           <LinkedIn className='size-6' />
-          <Mail />
+          <Mail className='size-6' />
+          <DevTo className='size-6' />
         </nav>
       </div>
 
       <img
-        class='rounded-full size-52 mb-4'
-        src='/erick.jpg'
+        class='rounded-full size-56 mb-4 hidden lg:block'
+        src='/me.png'
         alt='Erick Saavedra'
       />
     </SectionContainer>
 
-    <hr class='h-px my-8 bg-gray-200 border-0 mx-auto w-[1120px]' />
+    <hr class='h-px my-8 bg-gray-200 border-0 mx-auto lg:w-[1024px]' />
 
-    <SectionContainer className='pt-10 pb-10 grid grid-cols-3 gap-20'>
-      <div class='articles col-span-2'>
+    <SectionContainer
+      className='pt-10 pb-24 grid grid-cols-1 lg:grid-cols-3 lg:gap-20'
+    >
+      <div class='articles lg:col-span-2'>
         <h2 class='text-2xl font-bold text-slate-600 mb-4'>Recent posts</h2>
 
         <div class='flex flex-col gap-y-4'>
           <Post />
           <Post />
           <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
         </div>
       </div>
 
-      <div class='works border-2 p-4 rounded-2xl'>
-        <h2 class='text-2xl font-bold text-slate-600 mb-4'>Work</h2>
+      <hr
+        class='h-px my-8 bg-gray-200 border-0 mx-auto w-full col-span-3 lg:hidden'
+      />
 
-        <ul>
-          <li>Disruptive Studio</li>
-          <li>Bsale</li>
-        </ul>
+      <div
+        class='works h-[400px] flex flex-col gap-y-5 lg:border-2 p-6 rounded-2xl col-span-3 lg:col-span-1'
+      >
+        <h2 class='text-2xl font-bold text-slate-600'>Work</h2>
+
+        <Work {works} />
+
+        <button
+          type='button'
+          class='py-2.5 px-5 me-2 mb-2 text-sm font-bold text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-gray-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700'
+          >Download CV</button
+        >
       </div>
     </SectionContainer>
   </main>

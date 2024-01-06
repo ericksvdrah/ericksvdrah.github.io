@@ -18,10 +18,17 @@ const { title, description } = Astro.props;
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
+
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap'
+      rel='stylesheet'
+    />
   </head>
 
   <body>
-    <Header />
+    <Header client:load />
 
     <slot />
   </body>
@@ -33,14 +40,23 @@ const { title, description } = Astro.props;
   }
 
   html {
-    font-family: system-ui, sans-serif;
     scroll-behavior: smooth;
   }
 
   body {
-    background: #f6f5ed;
+    background: #fff;
+    font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Montserrat', sans-serif;
   }
 </style>
