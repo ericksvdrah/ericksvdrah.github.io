@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SectionContainer from '../components/SectionContainer.svelte';
+import LinkIcon from '../components/LinkIcon.svelte';
 import Post from '../components/Post.svelte';
 import GitHub from '../components/icons/GitHub.svelte';
 import LinkedIn from '../components/icons/LinkedIn.svelte';
@@ -22,11 +23,21 @@ import { works } from '../components/store.js';
         </p>
 
         <nav class='flex gap-x-4'>
-          <GitHub className='size-6' />
-          <X className='size-6' />
-          <LinkedIn className='size-6' />
-          <Mail className='size-6' />
-          <DevTo className='size-6' />
+          <LinkIcon href='https://www.github.com/erick-sk'>
+            <GitHub />
+          </LinkIcon>
+          <LinkIcon href='https://www.twitter.com/ericksk_'>
+            <X />
+          </LinkIcon>
+          <LinkIcon href='mailto:esvdrah@gmail.com'>
+            <Mail />
+          </LinkIcon>
+          <LinkIcon href='https://www.linkedin.com/in/erick-saavedra-dev/'>
+            <LinkedIn />
+          </LinkIcon>
+          <LinkIcon href='https://dev.to/ericksk'>
+            <DevTo />
+          </LinkIcon>
         </nav>
       </div>
 

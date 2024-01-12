@@ -1,10 +1,6 @@
-<script>
-  export let className = '';
-</script>
-
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  class={className}
+  class="size-6"
   width="24"
   height="24"
   viewBox="0 0 24 24"

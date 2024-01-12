@@ -1,9 +1,5 @@
-<script>
-  export let className = '';
-</script>
-
 <svg
-  class={className}
+  class="size-6"
   width="256"
   height="250"
   fill="currentColor"
