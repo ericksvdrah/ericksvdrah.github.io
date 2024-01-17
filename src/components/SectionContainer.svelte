@@ -2,6 +2,6 @@
   export let className = '';
 </script>
 
-<section class={`section ${className} w-full mx-auto lg:w-[1024px]`}>
+<section class={`section w-full mx-auto ${className} lg:w-[1024px]`}>
   <slot />
 </section>

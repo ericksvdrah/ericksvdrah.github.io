@@ -1,4 +1,4 @@
-<script client:load>
+<script>
   import Night from './icons/Night.svelte';
   import Light from './icons/Light.svelte';
 

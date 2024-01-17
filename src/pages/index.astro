@@ -1,17 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SectionContainer from '../components/SectionContainer.svelte';
-import LinkIcon from '../components/LinkIcon.svelte';
 import Divider from '../components/Divider.svelte';
+import SocialNetwork from '../components/SocialNetwork.svelte';
 import Articles from '../components/Articles.svelte';
-import GitHub from '../components/icons/GitHub.svelte';
-import LinkedIn from '../components/icons/LinkedIn.svelte';
-import Mail from '../components/icons/Mail.svelte';
 import Works from '../components/Works.svelte';
-import X from '../components/icons/X.svelte';
-import DevTo from '../components/icons/DevTo.svelte';
 import DowlaodCV from '../components/DowloadCV.svelte';
-import { works } from '../components/store.js';
 
 const response = await fetch('https://dev.to/api/articles/me', {
   headers: {
@@ -22,7 +16,7 @@ const articles = await response.json();
 ---
 
 <Layout title='Erick Saavedra' description='Website about Erick Saavedra'>
-  <main class='px-4'>
+  <main>
     <SectionContainer className='pt-32 flex justify-between'>
       <div>
         <h1 class='text-6xl font-black'>Hi, I'm Erick Saavedra!</h1>
@@ -32,21 +26,7 @@ const articles = await response.json();
         </p>
 
         <nav class='flex gap-x-4'>
-          <LinkIcon href='https://www.github.com/erick-sk'>
-            <GitHub />
-          </LinkIcon>
-          <LinkIcon href='https://www.twitter.com/ericksk_'>
-            <X />
-          </LinkIcon>
-          <LinkIcon href='mailto:esvdrah@gmail.com'>
-            <Mail />
-          </LinkIcon>
-          <LinkIcon href='https://www.linkedin.com/in/erick-saavedra-dev/'>
-            <LinkedIn />
-          </LinkIcon>
-          <LinkIcon href='https://dev.to/ericksk'>
-            <DevTo />
-          </LinkIcon>
+          <SocialNetwork />
         </nav>
       </div>
 
@@ -69,17 +49,18 @@ const articles = await response.json();
           <Articles {articles} client:load />
         </div>
       </div>
+
       <Divider styles='w-full col-span-3 lg:hidden' />
 
-      <section
-        class='works h-[400px] flex flex-col gap-y-5 lg:border-2 p-6 rounded-2xl col-span-3 lg:col-span-1'
+      <div
+        class='h-[400px] flex flex-col gap-y-5 p-6 rounded-2xl col-span-3 lg:col-span-1 lg:border-2'
       >
         <h2 class='text-2xl font-bold text-slate-600'>Work</h2>
 
-        <Works {works} />
+        <Works />
 
         <DowlaodCV />
-      </section>
+      </div>
     </SectionContainer>
   </main>
 </Layout>
