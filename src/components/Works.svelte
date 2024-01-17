@@ -26,9 +26,9 @@
     <div>
       <h1 class="text-sm font-bold mb-2">{work.name}</h1>
 
-      <div class="flex gap-x-2 text-xs lg:flex-col lg:text-sm">
-        <p>{work.title}</p>
-        <p>{work.time}</p>
+      <div class="flex gap-x-2 text-xs lg:flex-col">
+        <p class="text-zinc-500">{work.title}</p>
+        <p class="text-zinc-400">{work.time}</p>
       </div>
     </div>
   </div>
