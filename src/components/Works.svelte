@@ -1,4 +1,7 @@
 <script>
+  import Card from './Card.svelte';
+  import DownloadCV from './DownloadCV.svelte';
+
   const works = [
     {
       name: 'Bsale Perú',
@@ -15,21 +18,28 @@
   ];
 </script>
 
-{#each works as work}
-  <div class="flex gap-x-5 [&:not(:last-child)]:mb-5">
-    <img
-      class="size-14 rounded-full lg:size-20"
-      src={work.imgPath}
-      alt={`${work.name} Logo`}
-    />
+<Card>
+  <h2 class="text-2xl font-bold text-slate-600">Work</h2>
 
-    <div>
-      <h1 class="text-sm font-bold mb-2">{work.name}</h1>
+  {#each works as work}
+    <div class="flex gap-x-5 [&:not(:last-child)]:mb-5">
+      <img
+        class="size-14 rounded-full lg:size-20"
+        src={work.imgPath}
+        alt={`${work.name} Logo`}
+      />
 
-      <div class="flex gap-x-2 text-xs lg:flex-col">
-        <p class="text-zinc-500">{work.title}</p>
-        <p class="text-zinc-400">{work.time}</p>
+      <div>
+        <h1 class="text-sm font-bold mb-2">{work.name}</h1>
+
+        <div class="flex gap-x-2 text-xs lg:flex-col">
+          <p class="text-zinc-500">{work.title}</p>
+          <p class="text-zinc-400">{work.time}</p>
+        </div>
       </div>
     </div>
-  </div>
-{/each}
+  {/each}
+
+  <!-- TODO: change bgcolor -->
+  <DownloadCV />
+</Card>

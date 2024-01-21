@@ -15,8 +15,10 @@
   ];
 </script>
 
-{#each links as link}
-  <LinkIcon href={link.href}>
-    <svelte:component this={link.Icon} />
-  </LinkIcon>
-{/each}
+<nav class="flex flex-row gap-x-4">
+  {#each links as link}
+    <LinkIcon href={link.href}>
+      <svelte:component this={link.Icon} />
+    </LinkIcon>
+  {/each}
+</nav>
