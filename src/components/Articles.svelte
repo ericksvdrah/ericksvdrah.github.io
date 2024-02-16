@@ -3,29 +3,40 @@
 </script>
 
 <div class="articles lg:col-span-2">
-  <h2 class="text-2xl font-bold text-slate-600 mb-8">Recent posts</h2>
+  <h2 class="text-2xl font-bold text-slate-600 dark:text-zinc-200 mb-8">
+    Recent Posts
+  </h2>
 
   <div class="flex flex-col gap-y-8">
     {#each articles as { title, description, url }}
-      <!-- TODO: hover fix responsive -->
-      <!-- TODO: add see more button for 10 articles -->
-      <article class="group relative flex flex-col items-start">
-        <h3 class="text-base font-semibold tracking-tight text-zinc-800">
-          <div
-            class="absolute -inset-x-4 -inset-y-4 z-0 scale-95 bg-zinc-200 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl"
-          ></div>
-          <a href={url} target="_blank" rel="noopener noreferrer">
-            <span
-              class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"
-            ></span>
-            <span class="relative z-10">{title}</span>
+      <article
+        class="group relative flex flex-col items-start p-4 transition-all duration-300 ease-in-out border border-transparent hover:border-slate-300 dark:hover:border-zinc-700 rounded-lg"
+      >
+        <h3
+          class="text-lg font-semibold tracking-tight text-zinc-800 dark:text-zinc-200 mb-2"
+        >
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:underline"
+          >
+            {title}
           </a>
         </h3>
 
-        <p class="relative z-10 mt-2 text-sm text-zinc-600">
+        <p class="text-sm text-zinc-600 dark:text-zinc-400">
           {description}
         </p>
       </article>
     {/each}
+
+    {#if articles.length > 10}
+      <button
+        class="mt-4 px-6 py-2 bg-slate-600 dark:bg-zinc-800 text-white rounded-full self-center hover:bg-slate-700 dark:hover:bg-zinc-700 transition-colors"
+      >
+        See More
+      </button>
+    {/if}
   </div>
 </div>

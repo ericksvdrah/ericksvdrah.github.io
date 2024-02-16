@@ -19,22 +19,26 @@
 </script>
 
 <Card>
-  <h2 class="text-2xl font-bold text-slate-600">Work</h2>
+  <h2 class="text-2xl font-bold text-slate-600 dark:text-zinc-200 mb-4">
+    Work
+  </h2>
 
   {#each works as work}
-    <div class="flex gap-x-5 [&:not(:last-child)]:mb-5">
+    <div class="flex gap-x-5 mb-5 last:mb-0 items-center">
       <img
-        class="size-14 rounded-full lg:size-20"
+        class="w-14 h-14 rounded-full lg:w-20 lg:h-20 object-cover"
         src={work.imgPath}
         alt={`${work.name} Logo`}
       />
 
       <div>
-        <h1 class="text-sm font-bold mb-2">{work.name}</h1>
+        <h3 class="text-lg font-bold text-zinc-800 dark:text-zinc-200">
+          {work.name}
+        </h3>
 
-        <div class="flex gap-x-2 text-xs lg:flex-col">
-          <p class="text-zinc-500">{work.title}</p>
-          <p class="text-zinc-400">{work.time}</p>
+        <div class="flex gap-x-2 lg:flex-col lg:gap-y-1 text-xs">
+          <p class="text-zinc-600 dark:text-zinc-400">{work.title}</p>
+          <p class="text-zinc-500 dark:text-zinc-400">{work.time}</p>
         </div>
       </div>
     </div>

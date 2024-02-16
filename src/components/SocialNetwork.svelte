@@ -4,14 +4,14 @@
   import X from './icons/X.svelte';
   import Mail from './icons/Mail.svelte';
   import LinkedIn from './icons/LinkedIn.svelte';
-  import DevTo from './icons/DevTo.svelte';
+  // import DevTo from './icons/DevTo.svelte';
 
   const links = [
     { href: 'https://www.github.com/erick-sk', Icon: GitHub },
     { href: 'https://www.twitter.com/ericksk_', Icon: X },
     { href: 'mailto:esvdrah@gmail.com', Icon: Mail },
     { href: 'https://www.linkedin.com/in/erick-saavedra-dev/', Icon: LinkedIn },
-    { href: 'https://dev.to/ericksk', Icon: DevTo },
+    // { href: 'https://dev.to/ericksk', Icon: DevTo },
   ];
 </script>
 

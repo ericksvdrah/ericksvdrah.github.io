@@ -2,7 +2,7 @@
   import SocialNetwork from './SocialNetwork.svelte';
 </script>
 
-<div class="bio">
+<div class="bg-white text-black dark:bg-gray-800 dark:text-white">
   <h1 class="text-7xl font-black">Hi there!</h1>
 
   <div class="mb-10">

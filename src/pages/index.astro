@@ -7,6 +7,7 @@ import Avatar from '../components/Avatar.svelte';
 import Articles from '../components/Articles.svelte';
 import Works from '../components/Works.svelte';
 
+// Get Articles
 const response = await fetch('https://dev.to/api/articles/me', {
   headers: {
     'api-key': import.meta.env.DEV_API_KEY,
@@ -16,7 +17,7 @@ const articles = await response.json();
 ---
 
 <Layout title='Erick Saavedra' description='Website about Erick Saavedra'>
-  <main class='bg-white dark:bg-slate-500'>
+  <main class='bg-white text-black dark:bg-gray-800 dark:text-white'>
     <SectionContainer className='flex justify-between pt-20 lg:pt-32'>
       <Bio />
       <Avatar />
