@@ -44,6 +44,5 @@
     </div>
   {/each}
 
-  <!-- TODO: change bgcolor -->
   <DownloadCV />
 </Card>
