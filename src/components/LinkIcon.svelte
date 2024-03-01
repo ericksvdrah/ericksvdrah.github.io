@@ -2,6 +2,6 @@
   export let href = '';
 </script>
 
-<a {href} target="_blank" rel="noopener noreferrer">
+<a {href} target="_blank" rel="noopener noreferrer" aria-label="Social Network Links">
   <slot />
 </a>

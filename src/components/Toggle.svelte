@@ -22,8 +22,10 @@
 </script>
 
 <button
+  id="btn-toggle-theme"
   on:click={toggleTheme}
   class="h-12 w-12 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-800"
+  aria-label="Button Toggle Theme"
 >
   {#if isDarkMode}
     <Light />
