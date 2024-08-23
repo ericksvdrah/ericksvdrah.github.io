@@ -7,8 +7,8 @@
   // import DevTo from './icons/DevTo.svelte';
 
   const links = [
-    { href: 'https://www.github.com/erick-sk', Icon: GitHub },
-    { href: 'https://www.twitter.com/ericksk_', Icon: X },
+    { href: 'https://www.github.com/ericksvdrah', Icon: GitHub },
+    { href: 'https://www.twitter.com/ericksvdrah', Icon: X },
     { href: 'mailto:esvdrah@gmail.com', Icon: Mail },
     { href: 'https://www.linkedin.com/in/erick-saavedra-dev/', Icon: LinkedIn },
     // { href: 'https://dev.to/ericksk', Icon: DevTo },
